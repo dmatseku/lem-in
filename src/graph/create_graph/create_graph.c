@@ -13,4 +13,5 @@ graph	*create_graph(int fd)
 		exit_error("Malloc error");
 	ft_memset(result, 0, sizeof(graph));
 	input = set_ants(input_data, result);
+	input = set_nodes(input, result);
 }

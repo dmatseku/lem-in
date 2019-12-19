@@ -8,7 +8,14 @@ extern list_string	*input_data;
 
 list_string			*set_ants(list_string *input, graph *s_graph);
 
+list_string 		*set_nodes(list_string *input, graph *s_graph);
+
 list_string			*skip_comments(list_string *lst);
+
+list_string         *skip_comments_and_commands(list_string *lst);
+
+list_string			*skip_comments_check_commands(list_string *lst,
+													states *start_end);
 
 int					validate_ant(char const * str);
 
