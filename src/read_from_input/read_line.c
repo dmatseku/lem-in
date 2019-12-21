@@ -1,5 +1,5 @@
-#include "read.h"
-#include "../../../other/other.h"
+#include "read_from_input.h"
+#include "../other/other.h"
 #include "list_fd/list_fd.h"
 #include <unistd.h>
 

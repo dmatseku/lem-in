@@ -1,5 +1,5 @@
 #include "list_fd.h"
-#include "../../../../other/other.h"
+#include "../../other/other.h"
 
 list_fd		*list_fd_get_elem(list_fd **list, int fd)
 {
@@ -7,7 +7,7 @@ list_fd		*list_fd_get_elem(list_fd **list, int fd)
 	list_fd *new;
 
 	iter = *list;
-	while (iter->fd != fd)
+	while (iter && iter->fd != fd)
 		iter = iter->next;
 	if (iter)
 		return (iter);

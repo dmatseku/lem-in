@@ -7,7 +7,8 @@ void		list_fd_pop(list_fd **list, int fd)
 	iter = *list;
 	if (iter->fd == fd)
 	{
-		iter->next->prev = 0;
+		if (iter->next)
+			iter->next->prev = 0;
 		*list = iter->next;
 		free(iter);
 		return;

@@ -2,7 +2,7 @@
 #include "../../other/other.h"
 #include "../structs/s_node.h"
 
-list_string	*skip_comments(list_string *lst)
+t_list_string	*skip_comments(t_list_string *lst)
 {
 	while (lst && lst->str[0] == '#')
 	{
@@ -14,14 +14,15 @@ list_string	*skip_comments(list_string *lst)
 	return (lst);
 }
 
-list_string *skip_comments_and_commands(list_string *lst)
+t_list_string *skip_comments_and_commands(t_list_string *lst)
 {
     while (lst && lst->str[0] == '#')
         lst = lst->next;
     return (lst);
 }
 
-list_string *skip_comments_check_commands(list_string *lst, states *start_end)
+t_list_string *skip_comments_check_commands(t_list_string *lst,
+												states *start_end)
 {
 	*start_end = OTHER;
 	while (lst && lst->str[0] == '#')
@@ -31,12 +32,12 @@ list_string *skip_comments_check_commands(list_string *lst, states *start_end)
 			if (!ft_strcmp(lst->str, "##start"))
 			{
 				*start_end = START;
-				return (lst);
+				return (lst->next);
 			}
 			else if (!ft_strcmp(lst->str, "##end"))
 			{
 				*start_end = END;
-				return (lst);
+				return (lst->next);
 			}
 		}
 		lst = lst->next;

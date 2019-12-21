@@ -1,7 +1,7 @@
-#include "create_graph.h"
+#include "graph_create.h"
 #include "../../other/other.h"
 
-list_string	*set_ants(list_string *input, graph *s_graph)
+t_list_string	*set_ants(t_list_string *input, t_graph *s_graph)
 {
 	input = skip_comments(input);
 

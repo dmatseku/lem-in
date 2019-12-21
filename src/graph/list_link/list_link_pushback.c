@@ -1,9 +1,9 @@
 #include "list_link.h"
 #include "../../other/other.h"
 
-void			list_link_pushback(list_link **list, s_link *ptr)
+void			list_link_pushback(t_list_link **list, t_link *ptr)
 {
-	list_link *tmp;
+	t_list_link *tmp;
 
 	if (!*list)
 	{

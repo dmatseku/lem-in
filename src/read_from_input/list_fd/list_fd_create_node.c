@@ -1,5 +1,5 @@
 #include "list_fd.h"
-#include "../../../../other/other.h"
+#include "../../other/other.h"
 
 list_fd			*list_fd_create_node(int fd)
 {

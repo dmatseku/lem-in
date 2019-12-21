@@ -1,9 +1,9 @@
 #include "list_string.h"
 #include "../other/other.h"
 
-void list_string_pushback(list_string **list, char *str)
+void list_string_pushback(t_list_string **list, char *str)
 {
-	list_string *tmp;
+	t_list_string *tmp;
 
 	if (!*list)
 	{

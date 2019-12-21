@@ -3,21 +3,19 @@
 
 #include "s_node.h"
 
-typedef enum	direction
+typedef enum			e_direction
 {
-	left,
-	right,
-	two
-}				direction;
+	LEFT,
+	RIGHT,
+	TWO
+}						t_direction;
 
-typedef struct	s_link link;
-
-struct			s_link
+struct					s_link
 {
-	s_node		*left_node;
-	s_node		*right_node;
-	direction	dir;
-	int			weight;
+	t_node				*left_node;
+	t_node				*right_node;
+	t_direction			dir;
+	int32_t 				weight;
 };
 
 #endif
