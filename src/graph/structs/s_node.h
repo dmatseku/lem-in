@@ -18,14 +18,7 @@ typedef struct			s_node
 	uint32_t			index;
 	t_list_link			*links;
 	uint32_t			links_count;
-	struct s_node		*input;
-	struct s_node		*output;
-	bool				is_the_prev_input;
-	uint32_t			owner;
 	t_states			state;
-	int8_t				cost;
-	bool				is_cost_set;
-	struct s_node		*parent;
 }						t_node;
 
 #endif

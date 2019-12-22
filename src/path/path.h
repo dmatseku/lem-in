@@ -2,7 +2,17 @@
 #define LEM_IN_V2_PATH_H
 
 #include <stdint.h>
-#include "../../graph/graph.h"
+#include "../graph/graph.h"
+
+typedef struct	s_node_data
+{
+	int32_t		cost;
+	t_node		*parent;
+	t_node		*input;
+	t_node		*output;
+	bool		is_the_prev_input;
+	uint32_t	owner;
+}				t_node_data;
 
 typedef struct	s_path
 {
