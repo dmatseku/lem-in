@@ -4,7 +4,7 @@
 
 t_path_array	*create_path_array(t_graph *graph)
 {
-	int				size;
+	uint32_t		size;
 	t_path_array	*res;
 
 

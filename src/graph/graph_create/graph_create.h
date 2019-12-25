@@ -18,7 +18,7 @@ t_list_string			*skip_comments(t_list_string *lst);
 t_list_string			*skip_comments_and_commands(t_list_string *lst);
 
 t_list_string			*skip_comments_check_commands(t_list_string *lst,
-													states *start_end);
+													t_states *start_end);
 
 int						validate_ant(char const * str);
 

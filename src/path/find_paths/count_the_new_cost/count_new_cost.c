@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../../path.h"
 #include "../../../other/other.h"
-#include "count_the_new_cost.h"
+#include "count_new_cost.h"
 
 static uint32_t	*find_the_cost_for_each_paths(t_path *new_path,
 					t_path_array *paths, t_node_data *data, t_graph *graph)
@@ -49,5 +49,8 @@ static uint32_t	*find_the_cost_for_each_paths(t_path *new_path,
 int32_t	count_the_new_cost(t_path *new_path, t_path_array *paths,
 										t_node_data *data, t_graph *graph)
 {
-
+	uint32_t *array =
+			find_the_cost_for_each_paths(new_path, paths, data, graph);
+	free(array);
+	return (0);
 }

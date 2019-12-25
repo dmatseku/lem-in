@@ -1,4 +1,4 @@
-#include "count_the_new_cost.h"
+#include "count_new_cost.h"
 #include "../../path.h"
 
 uint32_t	get_death_zone(uint32_t const *path, uint32_t length,

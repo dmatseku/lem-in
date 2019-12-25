@@ -19,13 +19,12 @@ static int  			count_the_number_of_rooms(t_list_string *input)
 	return (res);
 }
 
-static void				set_room(t_node *n, int index, states state,
+static void				set_room(t_node *n, int index, t_states state,
 													char const *room)
 {
 	char *name;
 	int i;
 
-	n->cost = 1;
 	n->index = index;
 	n->state = state;
 	n->links = 0;
@@ -44,7 +43,7 @@ static void				set_room(t_node *n, int index, states state,
 static t_list_string	*init_rooms(t_list_string *input, t_graph *s_graph)
 {
 	uint32_t	i;
-	states		state;
+	t_states		state;
 
 	i = 0;
 	while (i < s_graph->nodes_length)
