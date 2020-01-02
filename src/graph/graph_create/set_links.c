@@ -13,7 +13,7 @@ static int  count_the_number_of_links(t_list_string *input)
 	while (input)
 	{
 		if (!validate_link(input->str))
-			exit_error("Invalid t_link");
+			exit_error("Invalid link");
 		res++;
 		input = skip_comments(input->next);
 	}
@@ -41,7 +41,7 @@ static void	set_link(t_link *l, t_node *node_one, t_node *node_two)
 	l->dir = TWO;
 	l->weight = 1;
 	if (!node_one || !node_two)
-		exit_error("Undefined t_node");
+		exit_error("Undefined node");
 	l->left_node = node_one;
 	l->right_node = node_two;
 	list_link_pushback(&(node_one->links), l);

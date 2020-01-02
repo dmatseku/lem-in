@@ -2,9 +2,8 @@
 
 char	*ft_strncat(char *str1, const char *str2, size_t n)
 {
-	char *res;
+	char *const res = str1;
 
-	res = str1;
 	while (*str1 != '\0')
 		str1++;
 	while (n-- > 0 && *str2 != '\0')

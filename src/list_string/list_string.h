@@ -17,4 +17,6 @@ t_list_string		*list_string_create_node(char *str);
 
 void				list_string_pushback(t_list_string **list, char *str);
 
+t_list_string		*list_string_get_last(t_list_string *list);
+
 #endif

@@ -8,7 +8,7 @@ t_list_string	*skip_comments(t_list_string *lst)
 	{
 		if (lst->str[1] == '#' && (!ft_strcmp(lst->str, "##start")
 								|| !ft_strcmp(lst->str, "##end")))
-			return (0);
+			exit_error("Undefined command");
 		lst = lst->next;
 	}
 	return (lst);

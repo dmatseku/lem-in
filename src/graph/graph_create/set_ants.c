@@ -8,5 +8,7 @@ t_list_string	*set_ants(t_list_string *input, t_graph *s_graph)
 	if (!input || !validate_ant(input->str))
 		exit_error("Invalid ants");
 	s_graph->ants = ft_atou(input->str);
+	if (s_graph->ants > 100000)
+		exit_error("Too much ants");
 	return (input->next);
 }

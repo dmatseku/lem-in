@@ -10,4 +10,6 @@ t_graph		*graph_create(t_list_string *input);
 
 void		graph_delete(t_graph *del_gr);
 
+void		graph_print_nodes_count(uint32_t nodes_count);
+
 #endif

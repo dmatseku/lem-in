@@ -11,7 +11,7 @@ typedef struct			s_graph
 	t_node				*end;
 	uint32_t			nodes_length;
 	uint32_t			links_length;
-	uint16_t			ants;
+	uint32_t			ants;
 }						t_graph;
 
 #endif

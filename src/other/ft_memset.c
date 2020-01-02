@@ -1,10 +1,10 @@
 #include "stdlib.h"
 
-void ft_memset(void *dest, char b, size_t size)
+void ft_memset(void *dest, unsigned char b, size_t size)
 {
-	char *c_dest;
+	unsigned char *c_dest;
 
-	c_dest = (char*)dest;
+	c_dest = (unsigned char*)dest;
 	while (size--)
 		c_dest[size] = b;
 }

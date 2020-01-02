@@ -25,11 +25,19 @@ typedef struct	s_path_array
 {
 	t_path		*paths;
 	uint32_t	path_count;
-	uint32_t	need_step_count;
+	uint32_t	need_step_cost;
 }				t_path_array;
 
-t_path_array	*create_path_array(t_graph *graph);
+void			path_array_delete(t_path_array *array);
 
-t_path_array	*find_paths(t_graph *graph);
+void			path_array_copy(t_path_array *in, t_path_array *src);
+
+t_path_array	*path_array_create(t_graph *graph);
+
+t_path_array	*path_array_init(t_graph *graph);
+
+void			path_array_print(t_path_array *path_array, t_graph *graph);
+
+void			path_array_print_steps_count(uint32_t steps);
 
 #endif
