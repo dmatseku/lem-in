@@ -16,7 +16,7 @@ static int  			count_the_number_of_rooms(t_list_string *input)
     }
     if (!input)
     	exit_error("No links");
-	return (res);
+    return (res);
 }
 
 static void				set_room(t_node *node, int index, t_states state,
