@@ -2,7 +2,6 @@
 #include "graph/structs/s_graph.h"
 #include "read_from_input/read_from_input.h"
 #include "path/path.h"
-#include <fcntl.h>
 #include <unistd.h>
 #include "manage_flags/manage_flags.h"
 #include "other/other.h"
@@ -57,15 +56,13 @@ bool	print_help(void)
 int main(int ac, char **av)
 {
 	t_list_string	*input;
-	t_graph			*graph;
+	t_graph		*graph;
 	t_path_array	*paths;
 
 	manage_flags(ac, av);
 	if (print_help())
 		return (0);
-	int fd = open("../test", O_RDONLY);
-	input = read_from_input(fd);
-	close(fd);
+	input = read_from_input(0);
 	graph = graph_create(input);
 	paths = path_array_init(graph);
 	if (!paths->path_count)
