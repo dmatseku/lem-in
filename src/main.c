@@ -62,11 +62,7 @@ int			main(int ac, char **av)
 	manage_flags(ac, av);
 	if (print_help())
 		return (0);
-
-#include <fcntl.h>
-	int fd = open("../test", O_RDONLY);
-	input = read_from_input(fd);
-	close(fd);
+	input = read_from_input(0);
 	graph = graph_create(input);
 	paths = path_array_init(graph);
 	if (!paths->path_count)
