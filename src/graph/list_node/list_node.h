@@ -1,7 +1,7 @@
 #ifndef LEM_IN_V2_LIST_NODE_H
-#define LEM_IN_V2_LIST_NODE_H
+# define LEM_IN_V2_LIST_NODE_H
 
-#include "../structs/s_node.h"
+# include "../structs/s_node.h"
 
 typedef struct			s_list_node
 {

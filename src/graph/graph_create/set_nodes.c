@@ -1,29 +1,29 @@
 #include "graph_create.h"
 #include "../../other/other.h"
 
-static int  			count_the_number_of_rooms(t_list_string *input)
+static int				count_the_number_of_rooms(t_list_string *input)
 {
-    int res;
+	int res;
 
-    res = 0;
-    input = skip_comments_and_commands(input);
-    while (input && !validate_link(input->str))
-    {
-        if (!validate_room(input->str))
-        	exit_error("Invalid room");
-        res++;
+	res = 0;
+	input = skip_comments_and_commands(input);
+	while (input && !validate_link(input->str))
+	{
+		if (!validate_room(input->str))
+			exit_error("Invalid room");
+		res++;
 		input = skip_comments_and_commands(input->next);
-    }
-    if (!input)
-    	exit_error("No links");
-    return (res);
+	}
+	if (!input)
+		exit_error("No links");
+	return (res);
 }
 
 static void				set_room(t_node *node, int index, t_states state,
-													char const *room)
+		char const *room)
 {
-	char *name;
-	int i;
+	char	*name;
+	int		i;
 
 	node->index = index;
 	node->state = state;
@@ -51,7 +51,7 @@ static t_list_string	*init_rooms(t_list_string *input, t_graph *graph)
 	{
 		input = skip_comments_check_commands(input, &state);
 		if ((state == START && graph->start)
-			|| (state == END && graph->end))
+				|| (state == END && graph->end))
 			exit_error("Double start or end");
 		if ((state == START || state == END) && input->str[0] == '#')
 			exit_error("Invalid field after command");
@@ -66,7 +66,7 @@ static t_list_string	*init_rooms(t_list_string *input, t_graph *graph)
 	return (input);
 }
 
-t_list_string 			*set_nodes(t_list_string *input, t_graph *graph)
+t_list_string			*set_nodes(t_list_string *input, t_graph *graph)
 {
 	t_list_string	*res;
 

@@ -9,7 +9,7 @@
 #include "color/color.h"
 
 static void	run_ants_and_print_all_info(t_list_string *input, t_graph *graph,
-										   t_path_array	*paths)
+														t_path_array *paths)
 {
 	t_list_string *last;
 
@@ -17,7 +17,7 @@ static void	run_ants_and_print_all_info(t_list_string *input, t_graph *graph,
 	list_string_print(input);
 	print_color(YELLOW);
 	run_ants_through_the_graph(graph, paths);
-	if (flags[LAST])
+	if (g_flags[LAST])
 	{
 		last = list_string_get_last(input);
 		if (last->str[0] == '#')
@@ -36,9 +36,9 @@ static void	run_ants_and_print_all_info(t_list_string *input, t_graph *graph,
 	graph_print_nodes_count(graph->nodes_length);
 }
 
-bool	print_help(void)
+static bool	print_help(void)
 {
-	if (!flags[HELP])
+	if (!g_flags[HELP])
 		return (false);
 	write(1, "Usage:\n"
 		"    ./lem-in < *path to file*\n"
@@ -53,16 +53,20 @@ bool	print_help(void)
 	return (true);
 }
 
-int main(int ac, char **av)
+int			main(int ac, char **av)
 {
 	t_list_string	*input;
-	t_graph		*graph;
+	t_graph			*graph;
 	t_path_array	*paths;
 
 	manage_flags(ac, av);
 	if (print_help())
 		return (0);
-	input = read_from_input(0);
+
+#include <fcntl.h>
+	int fd = open("../test", O_RDONLY);
+	input = read_from_input(fd);
+	close(fd);
 	graph = graph_create(input);
 	paths = path_array_init(graph);
 	if (!paths->path_count)

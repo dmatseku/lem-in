@@ -1,8 +1,8 @@
 #include "list_fd.h"
 
-void		list_fd_pop(list_fd **list, int fd)
+void		list_fd_pop(t_list_fd **list, int fd)
 {
-	list_fd *iter;
+	t_list_fd *iter;
 
 	iter = *list;
 	if (iter->fd == fd)
@@ -11,7 +11,7 @@ void		list_fd_pop(list_fd **list, int fd)
 			iter->next->prev = 0;
 		*list = iter->next;
 		free(iter);
-		return;
+		return ;
 	}
 	while (iter && iter->fd != fd)
 		iter = iter->next;

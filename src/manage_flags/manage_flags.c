@@ -2,32 +2,32 @@
 #include "../other/other.h"
 #include <stdint.h>
 
-bool	*flags;
+bool	*g_flags;
 
 void	manage_flags(int ac, char **av)
 {
-	char const * const restrict arr[] = {"-help", "-color", "-last",
-				  						"-paths", "-rooms", "-steps"};
+	char const *const restrict	arr[] = {"-help", "-color", "-last",
+										"-paths", "-rooms", "-steps"};
 	int32_t						i;
 
-	if (!(flags = (bool*)malloc(sizeof(bool) * FLAGS_COUNT)))
+	if (!(g_flags = (bool*)malloc(sizeof(bool) * FLAGS_COUNT)))
 		exit_error("Malloc error");
-	ft_memset(flags, 0, sizeof(bool) * FLAGS_COUNT);
+	ft_memset(g_flags, 0, sizeof(bool) * FLAGS_COUNT);
 	i = 1;
 	while (i < ac)
 	{
 		if (!ft_strcmp(av[i], arr[HELP]))
-			flags[HELP] = true;
+			g_flags[HELP] = true;
 		else if (!ft_strcmp(av[i], arr[COLOR]))
-			flags[COLOR] = true;
+			g_flags[COLOR] = true;
 		else if (!ft_strcmp(av[i], arr[LAST]))
-			flags[LAST] = true;
+			g_flags[LAST] = true;
 		else if (!ft_strcmp(av[i], arr[PATHS]))
-			flags[PATHS] = true;
+			g_flags[PATHS] = true;
 		else if (!ft_strcmp(av[i], arr[ROOMS]))
-			flags[ROOMS] = true;
+			g_flags[ROOMS] = true;
 		else if (!ft_strcmp(av[i], arr[STEPS]))
-			flags[STEPS] = true;
+			g_flags[STEPS] = true;
 		i++;
 	}
 }

@@ -14,15 +14,15 @@ t_list_string	*skip_comments(t_list_string *lst)
 	return (lst);
 }
 
-t_list_string *skip_comments_and_commands(t_list_string *lst)
+t_list_string	*skip_comments_and_commands(t_list_string *lst)
 {
-    while (lst && lst->str[0] == '#')
-        lst = lst->next;
-    return (lst);
+	while (lst && lst->str[0] == '#')
+		lst = lst->next;
+	return (lst);
 }
 
-t_list_string *skip_comments_check_commands(t_list_string *lst,
-												t_states *start_end)
+t_list_string	*skip_comments_check_commands(t_list_string *lst,
+											t_states *start_end)
 {
 	*start_end = OTHER;
 	while (lst && lst->str[0] == '#')
@@ -44,4 +44,3 @@ t_list_string *skip_comments_check_commands(t_list_string *lst,
 	}
 	return (lst);
 }
-

@@ -1,9 +1,9 @@
 #ifndef LEM_IN_V2_S_NODE_H
-#define LEM_IN_V2_S_NODE_H
+# define LEM_IN_V2_S_NODE_H
 
-#include <stdint.h>
-#include "../list_link/list_link.h"
-#include <stdbool.h>
+# include <stdint.h>
+# include "../list_link/list_link.h"
+# include <stdbool.h>
 
 typedef enum			e_states
 {

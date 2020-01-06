@@ -19,7 +19,7 @@ static void	copy_path(t_path *in, t_path *src)
 	}
 }
 
-void	path_array_copy(t_path_array *in, t_path_array *src)
+void		path_array_copy(t_path_array *in, t_path_array *src)
 {
 	uint32_t i;
 

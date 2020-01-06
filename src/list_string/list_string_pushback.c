@@ -1,7 +1,7 @@
 #include "list_string.h"
 #include "../other/other.h"
 
-void list_string_pushback(t_list_string **list, char *str)
+void	list_string_pushback(t_list_string **list, char *str)
 {
 	t_list_string *tmp;
 
@@ -10,7 +10,7 @@ void list_string_pushback(t_list_string **list, char *str)
 		*list = list_string_create_node(str);
 		if (!*list)
 			exit_error("Malloc error");
-		return;
+		return ;
 	}
 	tmp = *list;
 	while (tmp->next)

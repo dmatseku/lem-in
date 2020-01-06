@@ -1,7 +1,7 @@
 #ifndef LEM_IN_V2_SWAP_PATHS_H
-#define LEM_IN_V2_SWAP_PATHS_H
+# define LEM_IN_V2_SWAP_PATHS_H
 
-#include "../../../path.h"
+# include "../../../path.h"
 
 typedef	struct	s_two_paths_data
 {

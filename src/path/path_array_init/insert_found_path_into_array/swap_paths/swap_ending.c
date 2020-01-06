@@ -2,7 +2,7 @@
 #include "../../../../other/other.h"
 #include <stdlib.h>
 
-static t_path create_first_path(t_path *path_1, t_path *path_2,
+static t_path	create_first_path(t_path *path_1, t_path *path_2,
 					t_two_paths_data data, t_node_data *nodes_data)
 {
 	t_path		res;
@@ -29,7 +29,7 @@ static t_path create_first_path(t_path *path_1, t_path *path_2,
 	return (res);
 }
 
-static t_path create_second_path(t_path *path_1, t_path *path_2,
+static t_path	create_second_path(t_path *path_1, t_path *path_2,
 					t_two_paths_data data, t_node_data *nodes_data)
 {
 	t_path		res;
@@ -56,8 +56,8 @@ static t_path create_second_path(t_path *path_1, t_path *path_2,
 	return (res);
 }
 
-void	swap_ending(t_two_paths_data data, t_path *path_1, t_path *path_2,
-													t_node_data *nodes_data)
+void			swap_ending(t_two_paths_data data, t_path *path_1,
+							t_path *path_2, t_node_data *nodes_data)
 {
 	t_path res_1;
 	t_path res_2;

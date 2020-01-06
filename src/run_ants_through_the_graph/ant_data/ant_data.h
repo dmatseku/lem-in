@@ -1,8 +1,8 @@
 #ifndef LEM_IN_V2_ANT_DATA_H
-#define LEM_IN_V2_ANT_DATA_H
+# define LEM_IN_V2_ANT_DATA_H
 
-#include <stdint.h>
-#include <stdbool.h>
+# include <stdint.h>
+# include <stdbool.h>
 
 typedef struct	s_ant_data
 {

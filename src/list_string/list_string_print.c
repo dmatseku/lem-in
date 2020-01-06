@@ -2,7 +2,7 @@
 #include "unistd.h"
 #include "../other/other.h"
 
-void list_string_print(t_list_string *lst)
+void	list_string_print(t_list_string *lst)
 {
 	while (lst)
 	{

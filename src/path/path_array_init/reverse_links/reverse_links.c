@@ -14,11 +14,10 @@ static t_link	*find_need_link(t_list_link *list,
 }
 
 static void		reverse_links_of_one_path(t_path *path, t_graph *graph,
-									  t_node_data *nodes_data)
+											t_node_data *nodes_data)
 {
 	uint32_t	i;
 	t_link		*current_link;
-
 
 	i = 1;
 	while (i < path->length)
@@ -36,12 +35,12 @@ static void		reverse_links_of_one_path(t_path *path, t_graph *graph,
 }
 
 void			reverse_links(t_path_array *paths_array, t_graph *graph,
-						 						t_node_data *nodes_data)
+												t_node_data *nodes_data)
 {
 	uint32_t i;
 
 	i = 0;
-	while (i <paths_array->path_count)
+	while (i < paths_array->path_count)
 	{
 		reverse_links_of_one_path(paths_array->paths + i, graph, nodes_data);
 		i++;

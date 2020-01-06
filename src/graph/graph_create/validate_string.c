@@ -1,16 +1,17 @@
+
 int	validate_ant(char const *const restrict str)
 {
 	int i;
 
 	i = 0;
-	while(str[i] && str[i] >= '0' && str[i] <= '9')
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 		i++;
 	if (str[i])
 		return (0);
 	return (1);
 }
 
-int validate_room(char const * const restrict str)
+int	validate_room(char const *const restrict str)
 {
 	int i;
 
@@ -32,7 +33,7 @@ int validate_room(char const * const restrict str)
 	return (1);
 }
 
-int validate_link(char const * const restrict str)
+int	validate_link(char const *const restrict str)
 {
 	int i;
 

@@ -1,7 +1,7 @@
 #include <limits.h>
 #include <stdlib.h>
 
-size_t	ft_atou(char const * str)
+size_t	ft_atou(char const *str)
 {
 	size_t		res;
 

@@ -8,7 +8,6 @@ t_path_array	*path_array_create(t_graph *graph)
 	uint32_t		size;
 	t_path_array	*res;
 
-
 	size = graph->start->links_count;
 	if (graph->end->links_count < size)
 		size = graph->end->links_count;

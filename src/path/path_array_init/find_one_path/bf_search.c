@@ -13,7 +13,7 @@ void	check_every_link(t_list_node **list, t_node *node,
 	t_direction	direction;
 
 	if (node->state == END)
-		return;
+		return ;
 	current_link = node->links;
 	while (current_link)
 	{

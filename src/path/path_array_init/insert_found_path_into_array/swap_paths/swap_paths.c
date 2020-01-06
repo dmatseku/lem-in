@@ -10,7 +10,7 @@ static inline void	find_size_of_first_path(t_two_paths_data *data,
 }
 
 static inline void	find_size_of_second_path(t_two_paths_data *data,
-				  t_path *path_1, t_path *path_2, uint32_t index)
+					t_path *path_1, t_path *path_2, uint32_t index)
 {
 	data->second_path_first_part = get_size_of_fisrt_part(path_2,
 											path_1->path[index]);
@@ -18,7 +18,7 @@ static inline void	find_size_of_second_path(t_two_paths_data *data,
 											path_1->path[index]);
 }
 
-static uint32_t	skip_death_zone(t_path *path, uint32_t start_index,
+static uint32_t		skip_death_zone(t_path *path, uint32_t start_index,
 								t_node_data *nodes_data, uint32_t owner)
 {
 	uint32_t res;
@@ -38,7 +38,7 @@ static uint32_t	skip_death_zone(t_path *path, uint32_t start_index,
 	return (res);
 }
 
-uint32_t		swap_paths(t_path *path_1, t_path *path_2,
+uint32_t			swap_paths(t_path *path_1, t_path *path_2,
 			uint32_t start_index, t_node_data *nodes_data)
 {
 	t_two_paths_data	data;

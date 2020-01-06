@@ -3,13 +3,13 @@
 #include "../other/other.h"
 #include <unistd.h>
 
-void path_array_print(t_path_array *path_array, t_graph *graph)
+void	path_array_print(t_path_array *path_array, t_graph *graph)
 {
-	uint32_t i;
-	uint32_t j;
-	t_path	*current;
+	uint32_t	i;
+	uint32_t	j;
+	t_path		*current;
 
-	if (!flags[PATHS])
+	if (!g_flags[PATHS])
 		return ;
 	i = 0;
 	write(1, "\nFound paths:\n", 14);

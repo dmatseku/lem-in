@@ -2,7 +2,7 @@
 #include "../../other/other.h"
 
 t_graph	*graph_create(t_list_string *input)
-{;
+{
 	t_graph			*result;
 
 	if (!(result = (t_graph*)malloc(sizeof(t_graph))))

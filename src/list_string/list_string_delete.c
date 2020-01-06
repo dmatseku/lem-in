@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "list_string.h"
 
-void list_string_delete(t_list_string *lst)
+void	list_string_delete(t_list_string *lst)
 {
 	t_list_string *del;
 

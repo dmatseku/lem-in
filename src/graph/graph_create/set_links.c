@@ -2,7 +2,7 @@
 #include "../../other/other.h"
 #include "../structs/s_link.h"
 
-static int  count_the_number_of_links(t_list_string *input)
+static int		count_the_number_of_links(t_list_string *input)
 {
 	int res;
 
@@ -36,7 +36,7 @@ static t_node	*find_node(char *name, t_graph *s_graph)
 	return (0);
 }
 
-static void	set_link(t_link *l, t_node *node_one, t_node *node_two)
+static void		set_link(t_link *l, t_node *node_one, t_node *node_two)
 {
 	l->dir = TWO;
 	l->weight = 1;
@@ -50,7 +50,7 @@ static void	set_link(t_link *l, t_node *node_one, t_node *node_two)
 	node_two->links_count++;
 }
 
-static void	init_links(t_list_string *input, t_graph *s_graph)
+static void		init_links(t_list_string *input, t_graph *s_graph)
 {
 	uint32_t	i;
 	uint32_t	delim_nb;
@@ -74,7 +74,7 @@ static void	init_links(t_list_string *input, t_graph *s_graph)
 	}
 }
 
-void		set_links(t_list_string *input, t_graph *s_graph)
+void			set_links(t_list_string *input, t_graph *s_graph)
 {
 	s_graph->links_length = count_the_number_of_links(input);
 	s_graph->links = (t_link*)malloc(sizeof(t_link) * s_graph->links_length);

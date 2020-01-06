@@ -4,9 +4,9 @@
 
 void	print_color(t_colors color)
 {
-	static char* colors[] = {"[31m", "[32m", "[33m", "[34m", "[35m", "[36m"};
+	static char *colors[] = {"[31m", "[32m", "[33m", "[34m", "[35m", "[36m"};
 
-	if (!flags[COLOR])
+	if (!g_flags[COLOR])
 		return ;
 	write(1, "\033", 1);
 	if (color == CLEAR)

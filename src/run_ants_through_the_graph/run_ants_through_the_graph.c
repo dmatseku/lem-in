@@ -4,7 +4,7 @@
 #include "../other/other.h"
 #include <unistd.h>
 
-static void print_ant(char *ant_name, char *node_name, bool was_input)
+static void	print_ant(char *ant_name, char *node_name, bool was_input)
 {
 	char		*output;
 	uint32_t	len;
@@ -24,7 +24,7 @@ static void print_ant(char *ant_name, char *node_name, bool was_input)
 	free(output);
 }
 
-static bool keep_walking(t_ant_data *data, t_path *paths,
+static bool	keep_walking(t_ant_data *data, t_path *paths,
 											t_graph *graph)
 {
 	uint32_t	ant;
@@ -42,7 +42,7 @@ static bool keep_walking(t_ant_data *data, t_path *paths,
 			data[ant].position++;
 			position = data[ant].position;
 			print_ant(data[ant].name,
-					  graph->nodes[paths[owner].path[position]].name, res);
+					graph->nodes[paths[owner].path[position]].name, res);
 			res = true;
 		}
 		ant++;
@@ -78,7 +78,7 @@ static bool	do_first_steps(t_ant_data *ant_data, t_path_array *paths,
 	return (res);
 }
 
-void	run_ants_through_the_graph(t_graph *graph, t_path_array *paths)
+void		run_ants_through_the_graph(t_graph *graph, t_path_array *paths)
 {
 	t_ant_data	*ant_data;
 	bool		res_of_walk;

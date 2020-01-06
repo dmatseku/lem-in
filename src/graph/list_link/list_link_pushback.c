@@ -10,7 +10,7 @@ void			list_link_pushback(t_list_link **list, t_link *ptr)
 		*list = list_link_create_node(ptr);
 		if (!*list)
 			exit_error("Malloc error");
-		return;
+		return ;
 	}
 	tmp = *list;
 	while (tmp->next)

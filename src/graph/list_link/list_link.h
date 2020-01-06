@@ -1,5 +1,5 @@
 #ifndef LEM_IN_V2_LIST_LINK_H
-#define LEM_IN_V2_LIST_LINK_H
+# define LEM_IN_V2_LIST_LINK_H
 
 typedef struct s_link	t_link;
 

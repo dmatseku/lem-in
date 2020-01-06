@@ -3,14 +3,14 @@
 #include "../other/other.h"
 #include "../manage_flags/manage_flags.h"
 
-void		path_array_print_steps_count(uint32_t steps)
+void	path_array_print_steps_count(uint32_t steps)
 {
 	char		*output;
 	uint32_t	len;
 	uint32_t	nb_len;
 
-	if (!flags[STEPS])
-		return;
+	if (!g_flags[STEPS])
+		return ;
 	nb_len = uintlen(steps);
 	len = 32 + nb_len + 1;
 	if (!(output = (char*)malloc(sizeof(char) * len)))

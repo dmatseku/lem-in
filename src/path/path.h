@@ -1,8 +1,8 @@
 #ifndef LEM_IN_V2_PATH_H
-#define LEM_IN_V2_PATH_H
+# define LEM_IN_V2_PATH_H
 
-#include <stdint.h>
-#include "../graph/graph.h"
+# include <stdint.h>
+# include "../graph/graph.h"
 
 typedef struct	s_node_data
 {

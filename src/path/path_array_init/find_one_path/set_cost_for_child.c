@@ -23,8 +23,8 @@ static bool	check_cost(t_node *parent, t_node *child, int32_t weight,
 	return (false);
 }
 
-bool	set_cost_for_child(t_node *parent, t_node *child,
-									int32_t weight, t_node_data *nodes_data)
+bool		set_cost_for_child(t_node *parent, t_node *child,
+								int32_t weight, t_node_data *nodes_data)
 {
 	uint32_t	p_index;
 	uint32_t	c_index;

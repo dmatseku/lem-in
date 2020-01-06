@@ -1,5 +1,5 @@
 #ifndef LEM_IN_COLOR_H
-#define LEM_IN_COLOR_H
+# define LEM_IN_COLOR_H
 
 typedef enum	e_colors
 {

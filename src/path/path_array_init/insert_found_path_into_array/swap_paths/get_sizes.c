@@ -5,7 +5,8 @@ uint32_t	get_size_of_fisrt_part(t_path *path, uint32_t elem)
 	uint32_t	res;
 
 	res = 0;
-	while (path->path[res++] != elem);
+	while (path->path[res] != elem)
+		res++;
 	return (res);
 }
 

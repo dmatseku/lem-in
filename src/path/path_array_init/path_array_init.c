@@ -28,7 +28,7 @@ static t_path_array			*finding_cycle(t_graph *graph,
 															nodes_data);
 		cost = count_new_cost(new_array, graph->ants);
 		if (cost >= actual_array->need_step_cost)
-			break;
+			break ;
 		new_array->need_step_cost = cost;
 		path_array_copy(actual_array, new_array);
 		reverse_links(actual_array, graph, nodes_data);
@@ -42,8 +42,8 @@ t_path_array				*path_array_init(t_graph *graph)
 	t_node_data		*nodes_data;
 	t_path_array	*res;
 
-	if (!(nodes_data
-			= (t_node_data*)malloc(sizeof(t_node_data) * graph->nodes_length)))
+	if (!(nodes_data =
+			(t_node_data*)malloc(sizeof(t_node_data) * graph->nodes_length)))
 		exit_error("Malloc error");
 	ft_memset(nodes_data, 0, sizeof(t_node_data) * graph->nodes_length);
 	res = finding_cycle(graph, nodes_data);

@@ -1,7 +1,7 @@
 #ifndef LEM_IN_V2_S_GRAPH_H
-#define LEM_IN_V2_S_GRAPH_H
+# define LEM_IN_V2_S_GRAPH_H
 
-#include "s_node.h"
+# include "s_node.h"
 
 typedef struct			s_graph
 {

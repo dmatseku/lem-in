@@ -33,7 +33,7 @@ static void		realoc_str(char **str, char *tmp, size_t size, size_t size_all)
 	ft_strncat(*str, tmp, size);
 }
 
-static void		next_step(list_fd *elem, char **str)
+static void		next_step(t_list_fd *elem, char **str)
 {
 	size_t	size;
 	size_t	size_all;
@@ -46,16 +46,16 @@ static void		next_step(list_fd *elem, char **str)
 		size_all += size;
 		elem->last += size;
 		if (elem->last < elem->len)
-			break;
+			break ;
 		ft_memset(elem->buff, 0, BUFF_SIZE);
 		elem->len = read(elem->fd, elem->buff, BUFF_SIZE);
 		elem->last = 0;
 		if (elem->len <= 0)
-			break;
+			break ;
 	}
 }
 
-static int		create_line(list_fd *elem, char **str)
+static int		create_line(t_list_fd *elem, char **str)
 {
 	if (elem->last < elem->len)
 		elem->last++;
@@ -72,9 +72,9 @@ static int		create_line(list_fd *elem, char **str)
 
 int				read_line(char **str, int fd)
 {
-	static list_fd	*fds = 0;
-	list_fd			*elem;
-	int				res;
+	static t_list_fd	*fds = 0;
+	t_list_fd			*elem;
+	int					res;
 
 	if (fd < 0)
 		return (-1);

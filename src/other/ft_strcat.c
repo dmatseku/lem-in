@@ -1,3 +1,4 @@
+
 char	*ft_strcat(char *str1, const char *str2)
 {
 	char *const res = str1;
